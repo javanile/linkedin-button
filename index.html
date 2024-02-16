@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>LinkedIn Button</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="https://www.javanile.org/crisp/css/crisp.css">
+</head>
+<body>
+<h1>LinkedIn Button</h1>
+<p>Grow your project by putting a fantastic button that will allow your users to easily share your work on LinkedIn</p>
+
+<h3>Get Started</h3>
+<p>Type to the following area the content to share on LinkedIn</p>
+<textarea id="tweet" placeholder="Write a wonderful tweet here..." rows="6"></textarea>
+
+<h3>Look & Feel</h3>
+<p>Select the style that best fit with your needs</p>
+<select id="look-and-feel">
+  <option value="magic_button">Magic Button</option>
+  <option value="magic_button_small">Magic Button (Small)</option>
+  <option value="magic_button_large">Magic Button (Large)</option>
+</select>
+
+<h3>Preview</h3>
+<p>This is what the button looks like, click to see how it works</p>
+<section id="preview" align="center">
+  <a href="https://linkedin.com/intent/tweet?text=Hello%20world" target="_blank" rel="nofollow"><img src="https://camo.githubusercontent.com/f2bbc2f18671219cc944bb2de787f6499d4d9c291e5e969fea47ef3b2791da48/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f2d73686172652532306f6e253230747769747465722d626c75653f6c6f676f3d74776974746572267374796c653d666f722d7468652d6261646765" alt="Share on LinkedIn" data-canonical-src="https://img.shields.io/badge/-share%20on%20linkedin-blue?logo=linkedin&amp;style=for-the-badge" style="max-width: 100%;"></a>
+</section>
+
+<h3>Copy & Paste</h3>
+<p>Copy this code snippet and put it in your README.md</p>
+<textarea id="markdown" rows="6" readonly>[![Share on LinkedIn](https://img.shields.io/badge/-share%20on%20linkedin-blue?logo=linkedin&style=for-the-badge)](https://linkedin.com/intent/tweet?text=Hello%20world)</textarea>
+<div align="center">
+  <button id="copy-to-clipboard">Copy to Clipboard</button>
+  <div id="message"></div>
+</div>
+
+<h3>License</h3>
+<p>
+  The MIT License (MIT).
+  Please see <a href="https://github.com/javanile/linkedin-button/blob/main/LICENSE" target="_blank">License File</a>
+  for more information.
+</p>
+
+<hr>
+<small>
+  <a href="https://github.com/javanile/linkedin-button/edit/main/index.html">Edit on GitHub</a>
+</small>
+<a href="https://github.com/javanile/linkedin-button" target="_blank"><img src="https://github.blog/wp-content/uploads/2008/12/forkme_right_green_007200.png?resize=149%2C149" style="position:absolute;top:0;right:0;border:0;" width="149" height="149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1" /></a>
+
+<script type="text/javascript">
+  const tweet = document.getElementById('tweet');
+  const lookAndFeel = document.getElementById('look-and-feel');
+  const preview = document.getElementById('preview');
+  const markdown = document.getElementById('markdown');
+  const message = document.getElementById('message');
+  const copyToClipboard = document.getElementById('copy-to-clipboard');
+  const previewTemplate = '<a href="https://linkedin.com/intent/tweet?text={tweet}" target="_blank" rel="nofollow"><img src="{image}" alt="Share on LinkedIn" style="max-width: 100%;"></a>';
+  const markdownTemplate = '[![Share on LinkedIn]({image})](https://linkedin.com/intent/tweet?text={tweet})';
+  const buttonLookAndFeels = {
+    magic_button: 'https://img.shields.io/badge/-share%20on%20linkedin-blue?logo=linkedin&amp;style=for-the-badge',
+    magic_button_small: 'https://img.shields.io/badge/-Share%20on%20LinkedIn-blue?logo=linkedin&amp;style=flat-square',
+    magic_button_large: 'https://img.shields.io/badge/LinkedIn-share%20on%20linkedin-blue?logo=linkedin&amp;style=for-the-badge'
+  };
+
+  function updateButton() {
+    message.innerHTML = '';
+    preview.innerHTML = previewTemplate
+      .replace('{tweet}', encodeURIComponent(tweet.value))
+      .replace('{image}', buttonLookAndFeels[lookAndFeel.value]);
+    markdown.innerHTML = markdownTemplate
+      .replace('{tweet}', encodeURIComponent(tweet.value))
+      .replace('{image}', buttonLookAndFeels[lookAndFeel.value]);
+  }
+
+  function refreshButton() {
+    if (tweet.value.trim() != this.lastTweet) {
+      this.lastTweet = tweet.value.trim();
+      updateButton();
+    }
+  }
+
+  function copyMarkdown() {
+    markdown.select();
+    document.execCommand('Copy');
+    message.innerHTML = 'Markdown was copied!';
+  }
+
+  tweet.addEventListener('change', updateButton, true);
+  lookAndFeel.addEventListener('change', updateButton, true);
+  markdown.addEventListener('focus', markdown.select, true);
+  copyToClipboard.addEventListener('click', copyMarkdown, true);
+
+  setInterval(refreshButton, 3000);
+
+  refreshButton();
+</script>
+</body>
+</html>

@@ -5,7 +5,7 @@
 ***Create Magic LinkedIn Button for your README.md***  
   
 like this  
-[![Share on LinkedIn](https://img.shields.io/badge/-share%20on%20linkedin-blue?logo=linkedin&style=for-the-badge)](https://linkedin.com/intent/tweet?text=This%20%22Magic%20Button%22%20share%20stuff%20on%20LinkedIn%20from%20MARKDOWN%0A%0Ahttps%3A%2F%2Flinkedin.javanile.org%2F%0Ahttps%3A%2F%2Fgithub.com%2Fjavanile%2Flinkedin-button%0A%0A%23DEVCommunity%20%23Markdown%20%23LinkedInButton%20%23Socialware)
+[![Share on LinkedIn](https://img.shields.io/badge/-share%20on%20linkedin-blue?logo=linkedin&style=for-the-badge)](https://www.linkedin.com/feed/?shareActive=true&text=This%20%22Magic%20Button%22%20share%20stuff%20on%20LinkedIn%20from%20MARKDOWN%0A%0Ahttps%3A%2F%2Flinkedin.javanile.org%2F%0Ahttps%3A%2F%2Fgithub.com%2Fjavanile%2Flinkedin-button%0A%0A%23DEVCommunity%20%23Markdown%20%23LinkedInButton%20%23Socialware)
 
 </div>
 

@@ -11,22 +11,22 @@ like this
 
 ## Get Started
 
-Grow your project by putting a fantastic button that will allow your users to easily share your work on LinkedIn. Use the online tool to build your button
+Enhance your projects by incorporating a fantastic button that enables your users to effortlessly share your work on LinkedIn. Utilize our online tool to create your button!
 
 > 🔗 [https://linkedin.javanile.org](https://linkedin.javanile.org)
 
 ## Contributing
 
-Thank you for considering contributing to this project! The contribution guide can be found in the [CONTRIBUTING.md](CONTRIBUTING.md).
+We deeply appreciate your interest in contributing to this project! You can find the contribution guide in [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Code of Conduct
 
-In order to ensure that the Javanile community is welcoming to all, please review and abide by the [Code of Conduct](CONTRIBUTING.md#code-of-conduct).
+To foster a welcoming environment for all members of the Javanile community, we ask that you review and adhere to our [Code of Conduct](CONTRIBUTING.md#code-of-conduct).
 
 ## Security Vulnerabilities
 
-If you discover a security vulnerability within Javanile, please send an e-mail to Francesco Bianco via [bianco@javanile.org](mailto:bianco@javanile.org). All security vulnerabilities will be promptly addressed.
+If you identify any security vulnerabilities within Javanile, please promptly notify Francesco Bianco via [bianco@javanile.org](mailto:bianco@javanile.org). We will address all security concerns without delay.
 
 ## License
 
-This project is open-sourced software licensed under the [MIT license](LICENSE).
+This project is open-source software licensed under the [MIT license](LICENSE).
